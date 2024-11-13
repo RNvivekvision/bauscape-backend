@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Email</title>
+    <style>
+        /* General reset for email clients */
+        body,
+        table,
+        td,
+        a {
+            text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+        }
+
+        body {
+            background-color: #FFFFFF;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        img {
+            display: block;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: #000000;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #009136;
+            color: #FFFFFF !important;
+            text-decoration: none !important;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            color: #FFFFFF;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1,
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="container" align="center" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td align="center">
+                            <img src="https://bfd.api.testinstance.netcircuit.de/logos/logo.jpg" alt="Logo" width="150">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1>Willkommen in der App Welt von Welzel Bau GmbH, Wache Parkettleger GmbH und Berlin
+                                Fliesendesign BFD GmbH.</h1>
+                            <h2>Hallo <%= user.firstName %>
+                                    <%= user.lastName %>,</h2>
+                            <p>Bitte registriere Dich in den nachfolgenden Schritten in dieser App!</p>
+                            <p>Wir freuen uns ab sofort tolle Neuerungen mit Dir zu nutzen wie die projektbezogene
+                                Erfassung deiner Arbeitszeiten, die digitale Bauakte und Lagerwirtschaft sowie
+                                Bestellung direkt von deinem Handy oder iPad!</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="button-container">
+                            <a href="<%= `${clientURI}/user/authentication/verify-email/${userId}/${token}` %>">Stellen
+                                Sie fest Ihre Neues Kennwort</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

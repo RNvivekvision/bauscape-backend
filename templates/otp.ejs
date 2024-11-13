@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+                monospace;
+        }
+
+        body {
+            /* font-family: 'Poppins', sans-serif !important; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #FFFFFF !important;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: #009136 !important;
+        }
+
+        .otp-container,
+        .button-container {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .otp-code {
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            color: #009136;
+            border-radius: 10px;
+            background-color: #E3F4E3;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hello <%= user.firstName %>,</h2>
+        <p>We have received your request to reset your password. Please use the following OTP code to reset your
+            password:</p>
+        <div class="otp-container">
+            <code class="otp-code">
+                <%= otpCode %>
+            </code>
+        </div>
+        <p>The OTP code will be expired in 10 minutes. If you did not request a password reset, please contact admin.
+        </p>
+        <div class="button-container">
+            <a href="<%= `${clientURI}/user/authentication/verify-otp/${user._id}` %>">RESET YOUR PASSWORD</a>
+        </div>
+    </div>
+</body>
+
+</html>

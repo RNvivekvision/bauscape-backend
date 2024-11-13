@@ -1,0 +1,4831 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "BFD",
+    "contact": {}
+  },
+  "host": "localhost:8080",
+  "basePath": "/api",
+  "securityDefinitions": {
+    "BearerAuth": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\""
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/menu/insert": {
+      "post": {
+        "summary": "Create Menu",
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "CreateMenu",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateMenuRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/menu/get": {
+      "get": {
+        "summary": "Get Menus",
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "GetMenus",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/menu/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Options",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype/insert": {
+      "post": {
+        "summary": "Create User Type",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "CreateUserType",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateUserTypeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype/get": {
+      "post": {
+        "summary": "Get User Types",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "GetUserTypes",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetUserTypesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype": {
+      "get": {
+        "summary": "Get User Type",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "GetUserType",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype/update": {
+      "post": {
+        "summary": "Update User Type",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "UpdateUserType",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateUserTypeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype/status": {
+      "post": {
+        "summary": "Toggle",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "Toggle",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/usertype/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "User Type"
+        ],
+        "operationId": "GetOptions",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/insert": {
+      "post": {
+        "summary": "Create User",
+        "tags": [
+          "User"
+        ],
+        "operationId": "CreateUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/get": {
+      "post": {
+        "summary": "Get Users",
+        "tags": [
+          "User"
+        ],
+        "operationId": "GetUsers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetUsersRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user": {
+      "get": {
+        "summary": "Get User",
+        "tags": [
+          "User"
+        ],
+        "operationId": "GetUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/update": {
+      "post": {
+        "summary": "Update User",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UpdateUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "lastName",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "phone",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "address[streetNo]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "address[city]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "address[zip]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "profilePicture",
+            "in": "formData",
+            "required": true,
+            "type": "file",
+            "format": "file",
+            "description": ""
+          },
+          {
+            "name": "id",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Status",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/onboarding": {
+      "get": {
+        "summary": "Onboarding",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Onboarding",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/authentication/set-password": {
+      "post": {
+        "summary": "Set Password",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "SetPassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/check-invitation": {
+      "get": {
+        "summary": "Check Invitation",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CheckInvitation",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/authentication/resend-invitation": {
+      "get": {
+        "summary": "Resend Invitation",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "ResendInvitation",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/authentication/sign-in": {
+      "post": {
+        "summary": "Sign In",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "SignIn",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SignInRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/request-otp": {
+      "post": {
+        "summary": "Request OTP",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "RequestOTP",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RequestOTPRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/resend-otp": {
+      "post": {
+        "summary": "Resend OTP",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "ResendOTP",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResendOTPRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/verify-otp": {
+      "post": {
+        "summary": "Verify OTP",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "VerifyOTP",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/VerifyOTPRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/reset-password": {
+      "post": {
+        "summary": "Reset Password",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "ResetPassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authentication/change-password": {
+      "post": {
+        "summary": "Change Password",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "ChangePassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ChangePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package/insert": {
+      "post": {
+        "summary": "Create Package",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "CreatePackage",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatePackageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package/get": {
+      "post": {
+        "summary": "Get Packages",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "GetPackages",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetPackagesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package": {
+      "get": {
+        "summary": "Get Package",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "GetPackage",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package/update": {
+      "post": {
+        "summary": "Update Package",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "UpdatePackage",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdatePackageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package/status": {
+      "post": {
+        "summary": "Toggle Package Status",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "TogglePackageStatus",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/package/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "Package"
+        ],
+        "operationId": "GetOptions1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/insert": {
+      "post": {
+        "summary": "Create Organizer",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "CreateOrganizer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateOrganizerRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/get": {
+      "post": {
+        "summary": "Get Organizers",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "GetOrganizers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOrganizersRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer": {
+      "get": {
+        "summary": "Get Organizer",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "GetOrganizer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/update": {
+      "post": {
+        "summary": "Update Organizer",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "UpdateOrganizer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "lastName",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "company",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "phone",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userType",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "organizer",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "package",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "designation",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "employeeType",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "holiday",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userLimit",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "workType",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "weeklyWorkHours",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "isImmutable",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "profilePicture",
+            "in": "formData",
+            "required": true,
+            "type": "file",
+            "format": "file",
+            "description": ""
+          },
+          {
+            "name": "address[streetNo]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "address[city]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "address[zip]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "id",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "PostStatus",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/onboarding": {
+      "get": {
+        "summary": "Onboarding",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "GetOnboarding",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/organizer/options": {
+      "post": {
+        "summary": "Options",
+        "tags": [
+          "Organizer"
+        ],
+        "operationId": "PostOptions",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation/insert": {
+      "post": {
+        "summary": "Create Designation",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "CreateDesignation",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateDesignationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation/get": {
+      "post": {
+        "summary": "Get Designations",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "GetDesignations",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetDesignationsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation": {
+      "get": {
+        "summary": "Get Designation",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "GetDesignation",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation/update": {
+      "post": {
+        "summary": "Update Designation",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "UpdateDesignation",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateDesignationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation/status": {
+      "post": {
+        "summary": "Toggle Designation Status",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "ToggleDesignationStatus",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/designation/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "Designation"
+        ],
+        "operationId": "GetOptions2",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "organizer",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuser/insert": {
+      "post": {
+        "summary": "Create Stamm User",
+        "tags": [
+          "Stamm User"
+        ],
+        "operationId": "CreateStammUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateStammUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuser/get": {
+      "post": {
+        "summary": "Get Stamm Users",
+        "tags": [
+          "Stamm User"
+        ],
+        "operationId": "GetStammUsers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetStammUsersRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuser": {
+      "get": {
+        "summary": "Get Stamm User",
+        "tags": [
+          "Stamm User"
+        ],
+        "operationId": "GetStammUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuser/update": {
+      "post": {
+        "summary": "Update Stamm User",
+        "tags": [
+          "Stamm User"
+        ],
+        "operationId": "UpdateStammUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateStammUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuser/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Stamm User"
+        ],
+        "operationId": "PostStatus1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject/insert": {
+      "post": {
+        "summary": "Create Stamm User Project",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "CreateStammUserProject",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateStammUserProjectRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject/get": {
+      "post": {
+        "summary": "Get Stamm User Projects",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "GetStammUserProjects",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetStammUserProjectsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject": {
+      "get": {
+        "summary": "Get Stamm User Project",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "GetStammUserProject",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject/update": {
+      "post": {
+        "summary": "Update Stamm User Project",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "UpdateStammUserProject",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateStammUserProjectRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "PostStatus2",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserproject/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "Stamm User Project"
+        ],
+        "operationId": "GetOptions3",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserdocument/insert": {
+      "post": {
+        "summary": "Create Stamm User Document",
+        "tags": [
+          "Stamm User Document"
+        ],
+        "operationId": "CreateStammUserDocument",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "document",
+            "in": "formData",
+            "required": true,
+            "type": "file",
+            "format": "file",
+            "description": ""
+          },
+          {
+            "name": "stammUser",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserdocument/get": {
+      "post": {
+        "summary": "Get Stamm User Projects",
+        "tags": [
+          "Stamm User Document"
+        ],
+        "operationId": "PostGetStammUserProjects",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetStammUserProjectsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserdocument": {
+      "get": {
+        "summary": "Get Stamm User Project",
+        "tags": [
+          "Stamm User Document"
+        ],
+        "operationId": "GetStammUserProject1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/stammuserdocument/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Stamm User Document"
+        ],
+        "operationId": "PostStatus3",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar/insert": {
+      "post": {
+        "summary": "Create Lagar",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "CreateLagar",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateLagarRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar/get": {
+      "post": {
+        "summary": "Get Lagars",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "GetLagars",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetLagarsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar": {
+      "get": {
+        "summary": "Get Lagar",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "GetLagar",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar/update": {
+      "post": {
+        "summary": "Update Lagar",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "UpdateLagar",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateLagarRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "PostStatus4",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lagar/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "Lagar"
+        ],
+        "operationId": "GetOptions4",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "organizer",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/whplace/insert": {
+      "post": {
+        "summary": "Create WH Place",
+        "tags": [
+          "WH Place"
+        ],
+        "operationId": "CreateWHPlace",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateWHPlaceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/whplace/get": {
+      "post": {
+        "summary": "Get WH Places",
+        "tags": [
+          "WH Place"
+        ],
+        "operationId": "GetWHPlaces",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetWHPlacesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/whplace": {
+      "get": {
+        "summary": "Get WH Place",
+        "tags": [
+          "WH Place"
+        ],
+        "operationId": "GetWHPlace",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/whplace/update": {
+      "post": {
+        "summary": "Update WH Place",
+        "tags": [
+          "WH Place"
+        ],
+        "operationId": "UpdateWHPlace",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateWHPlaceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/whplace/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "WH Place"
+        ],
+        "operationId": "PostStatus5",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/insert": {
+      "post": {
+        "summary": "Insert Time Tracking",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "InsertTimeTracking",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/InsertTimeTrackingRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/get-by-user": {
+      "get": {
+        "summary": "Get Records by Users",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "GetRecordsbyUsers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "organizer",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/get-by-day": {
+      "get": {
+        "summary": "Get Records by Day",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "GetRecordsbyDay",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "organizer",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/get": {
+      "get": {
+        "summary": "Get Time Tracking",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "GetTimeTracking",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/update": {
+      "post": {
+        "summary": "Update Time Tracking",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "UpdateTimeTracking",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateTimeTrackingRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/status": {
+      "post": {
+        "summary": "Status",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "PostStatus6",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/timetracking/history": {
+      "get": {
+        "summary": "Get Work Hostory",
+        "tags": [
+          "Time Tracking"
+        ],
+        "operationId": "GetWorkHostory",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "weekStartDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "weekEndDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/city/insert": {
+      "post": {
+        "summary": "Create City",
+        "tags": [
+          "City"
+        ],
+        "operationId": "CreateCity",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateCityRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/city/get": {
+      "post": {
+        "summary": "Get Cities",
+        "tags": [
+          "City"
+        ],
+        "operationId": "GetCities",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetCitiesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/city": {
+      "get": {
+        "summary": "Get City",
+        "tags": [
+          "City"
+        ],
+        "operationId": "GetCity",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/city/update": {
+      "post": {
+        "summary": "Update City",
+        "tags": [
+          "City"
+        ],
+        "operationId": "UpdateCity",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateCityRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/city/options": {
+      "get": {
+        "summary": "Options",
+        "tags": [
+          "City"
+        ],
+        "operationId": "GetOptions5",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/language": {
+      "get": {
+        "summary": "Get Language",
+        "tags": [
+          "Language"
+        ],
+        "operationId": "GetLanguage",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/language/update": {
+      "post": {
+        "summary": "Update Language",
+        "tags": [
+          "Language"
+        ],
+        "operationId": "UpdateLanguage",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateLanguageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/authentication/sign-out": {
+      "post": {
+        "summary": "Sign Out",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "SignOut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "User ID for signing out"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully signed out"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "CreateMenuRequest": {
+      "title": "CreateMenuRequest",
+      "example": {
+        "name": "User Management",
+        "children": [
+          {
+            "name": "Users"
+          },
+          {
+            "name": "User Types"
+          },
+          {
+            "name": "Designations"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Child"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "children"
+      ]
+    },
+    "Child": {
+      "title": "Child",
+      "example": {
+        "name": "Users"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "CreateUserTypeRequest": {
+      "title": "CreateUserTypeRequest",
+      "example": {
+        "name": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "organizer"
+      ]
+    },
+    "GetUserTypesRequest": {
+      "title": "GetUserTypesRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10,
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit",
+        "organizer"
+      ]
+    },
+    "UpdateUserTypeRequest": {
+      "title": "UpdateUserTypeRequest",
+      "example": {
+        "id": "",
+        "name": "",
+        "organizer": "",
+        "menu": [
+          {
+            "menu": "",
+            "permissions": {
+              "hasAccess": true,
+              "canCreate": true,
+              "canUpdate": true,
+              "canDelete": true
+            }
+          },
+          {
+            "menu": "",
+            "permissions": {
+              "hasAccess": true,
+              "canCreate": true,
+              "canUpdate": true,
+              "canDelete": true
+            },
+            "children": [
+              {
+                "menu": "",
+                "permissions": {
+                  "hasAccess": true,
+                  "canCreate": true,
+                  "canUpdate": true,
+                  "canDelete": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Menu"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "organizer",
+        "menu"
+      ]
+    },
+    "Menu": {
+      "title": "Menu",
+      "example": {
+        "menu": "",
+        "permissions": {
+          "hasAccess": true,
+          "canCreate": true,
+          "canUpdate": true,
+          "canDelete": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "menu": {
+          "type": "string"
+        },
+        "permissions": {
+          "$ref": "#/definitions/Permissions"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Child1"
+          }
+        }
+      },
+      "required": [
+        "menu",
+        "permissions"
+      ]
+    },
+    "Permissions": {
+      "title": "Permissions",
+      "example": {
+        "hasAccess": true,
+        "canCreate": true,
+        "canUpdate": true,
+        "canDelete": true
+      },
+      "type": "object",
+      "properties": {
+        "hasAccess": {
+          "type": "boolean"
+        },
+        "canCreate": {
+          "type": "boolean"
+        },
+        "canUpdate": {
+          "type": "boolean"
+        },
+        "canDelete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "hasAccess",
+        "canCreate",
+        "canUpdate",
+        "canDelete"
+      ]
+    },
+    "Child1": {
+      "title": "Child1",
+      "example": {
+        "menu": "",
+        "permissions": {
+          "hasAccess": true,
+          "canCreate": true,
+          "canUpdate": true,
+          "canDelete": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "menu": {
+          "type": "string"
+        },
+        "permissions": {
+          "$ref": "#/definitions/Permissions"
+        }
+      },
+      "required": [
+        "menu",
+        "permissions"
+      ]
+    },
+    "CreateUserRequest": {
+      "title": "CreateUserRequest",
+      "example": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phone": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "userType": ""
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "userType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "address",
+        "userType"
+      ]
+    },
+    "Address": {
+      "title": "Address",
+      "example": {
+        "streetNo": "",
+        "city": "",
+        "zip": 0
+      },
+      "type": "object",
+      "properties": {
+        "streetNo": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "streetNo",
+        "city",
+        "zip"
+      ]
+    },
+    "GetUsersRequest": {
+      "title": "GetUsersRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit"
+      ]
+    },
+    "SetPasswordRequest": {
+      "title": "SetPasswordRequest",
+      "example": {
+        "id": "",
+        "token": "",
+        "password": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "token",
+        "password"
+      ]
+    },
+    "SignInRequest": {
+      "title": "SignInRequest",
+      "example": {
+        "email": "admin@mail.com",
+        "password": "Admin@123"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "RequestOTPRequest": {
+      "title": "RequestOTPRequest",
+      "example": {
+        "email": ""
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "ResendOTPRequest": {
+      "title": "ResendOTPRequest",
+      "example": {
+        "email": ""
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "VerifyOTPRequest": {
+      "title": "VerifyOTPRequest",
+      "example": {
+        "id": "",
+        "otp": 0
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "otp": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id",
+        "otp"
+      ]
+    },
+    "ResetPasswordRequest": {
+      "title": "ResetPasswordRequest",
+      "example": {
+        "id": "",
+        "token": "",
+        "password": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "token",
+        "password"
+      ]
+    },
+    "ChangePasswordRequest": {
+      "title": "ChangePasswordRequest",
+      "example": {
+        "id": "",
+        "currentPassword": "",
+        "newPassword": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "currentPassword": {
+          "type": "string"
+        },
+        "newPassword": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "currentPassword",
+        "newPassword"
+      ]
+    },
+    "CreatePackageRequest": {
+      "title": "CreatePackageRequest",
+      "example": {
+        "name": "",
+        "menu": []
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "menu"
+      ]
+    },
+    "GetPackagesRequest": {
+      "title": "GetPackagesRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit"
+      ]
+    },
+    "UpdatePackageRequest": {
+      "title": "UpdatePackageRequest",
+      "example": {
+        "id": "",
+        "name": "",
+        "menu": []
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "menu"
+      ]
+    },
+    "CreateOrganizerRequest": {
+      "title": "CreateOrganizerRequest",
+      "example": {
+        "firstName": "",
+        "lastName": "",
+        "phone": "",
+        "email": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "company": "",
+        "package": "",
+        "organizer": "",
+        "isImmutable": true,
+        "designation": "",
+        "employeeType": "",
+        "holiday": 0,
+        "userLimit": 0,
+        "workType": "",
+        "weeklyWorkHours": 0
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "company": {
+          "type": "string"
+        },
+        "package": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        },
+        "isImmutable": {
+          "type": "boolean"
+        },
+        "designation": {
+          "type": "string"
+        },
+        "employeeType": {
+          "type": "string"
+        },
+        "holiday": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userLimit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "workType": {
+          "type": "string"
+        },
+        "weeklyWorkHours": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "phone",
+        "email",
+        "address",
+        "company",
+        "package",
+        "organizer",
+        "isImmutable",
+        "designation",
+        "employeeType",
+        "holiday",
+        "userLimit",
+        "workType",
+        "weeklyWorkHours"
+      ]
+    },
+    "GetOrganizersRequest": {
+      "title": "GetOrganizersRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10,
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit",
+        "organizer"
+      ]
+    },
+    "CreateDesignationRequest": {
+      "title": "CreateDesignationRequest",
+      "example": {
+        "name": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "organizer"
+      ]
+    },
+    "GetDesignationsRequest": {
+      "title": "GetDesignationsRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10,
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit",
+        "organizer"
+      ]
+    },
+    "UpdateDesignationRequest": {
+      "title": "UpdateDesignationRequest",
+      "example": {
+        "id": "",
+        "name": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "organizer"
+      ]
+    },
+    "CreateStammUserRequest": {
+      "title": "CreateStammUserRequest",
+      "example": {
+        "company": "",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phone": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "organizer": "",
+        "otherContact": [
+          {
+            "name": "",
+            "city": "",
+            "phone": ""
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "organizer": {
+          "type": "string"
+        },
+        "otherContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OtherContact"
+          }
+        }
+      },
+      "required": [
+        "company",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "address",
+        "organizer",
+        "otherContact"
+      ]
+    },
+    "OtherContact": {
+      "title": "OtherContact",
+      "example": {
+        "name": "",
+        "city": "",
+        "phone": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "phone"
+      ]
+    },
+    "GetStammUsersRequest": {
+      "title": "GetStammUsersRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10,
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit",
+        "organizer"
+      ]
+    },
+    "UpdateStammUserRequest": {
+      "title": "UpdateStammUserRequest",
+      "example": {
+        "id": "",
+        "company": "",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phone": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "organizer": "",
+        "otherContact": [
+          {
+            "name": "",
+            "email": "",
+            "phone": ""
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "organizer": {
+          "type": "string"
+        },
+        "otherContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OtherContact1"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "company",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "address",
+        "organizer",
+        "otherContact"
+      ]
+    },
+    "OtherContact1": {
+      "title": "OtherContact1",
+      "example": {
+        "name": "",
+        "email": "",
+        "phone": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "phone"
+      ]
+    },
+    "CreateStammUserProjectRequest": {
+      "title": "CreateStammUserProjectRequest",
+      "example": {
+        "name": "",
+        "phone": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "stammUser": "",
+        "otherContact": [
+          {
+            "name": "",
+            "email": "",
+            "phone": ""
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "stammUser": {
+          "type": "string"
+        },
+        "otherContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OtherContact1"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "phone",
+        "address",
+        "stammUser",
+        "otherContact"
+      ]
+    },
+    "GetStammUserProjectsRequest": {
+      "title": "GetStammUserProjectsRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10,
+        "stammUser": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "stammUser": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit",
+        "stammUser"
+      ]
+    },
+    "UpdateStammUserProjectRequest": {
+      "title": "UpdateStammUserProjectRequest",
+      "example": {
+        "id": "",
+        "name": "",
+        "phone": "",
+        "address": {
+          "streetNo": "",
+          "city": "",
+          "zip": 0
+        },
+        "stammUser": "",
+        "otherContact": [
+          {
+            "name": "",
+            "email": "",
+            "phone": ""
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "stammUser": {
+          "type": "string"
+        },
+        "otherContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OtherContact1"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "phone",
+        "address",
+        "stammUser",
+        "otherContact"
+      ]
+    },
+    "CreateLagarRequest": {
+      "title": "CreateLagarRequest",
+      "example": {
+        "name": "",
+        "city": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "organizer"
+      ]
+    },
+    "GetLagarsRequest": {
+      "title": "GetLagarsRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "filters": {
+          "city": []
+        },
+        "page": 1,
+        "limit": 10,
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "filters": {
+          "$ref": "#/definitions/Filters"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "filters",
+        "page",
+        "limit",
+        "organizer"
+      ]
+    },
+    "Filters": {
+      "title": "Filters",
+      "example": {
+        "city": []
+      },
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "city"
+      ]
+    },
+    "UpdateLagarRequest": {
+      "title": "UpdateLagarRequest",
+      "example": {
+        "id": "",
+        "name": "",
+        "city": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "city",
+        "organizer"
+      ]
+    },
+    "CreateWHPlaceRequest": {
+      "title": "CreateWHPlaceRequest",
+      "example": {
+        "city": "",
+        "rackSelfNumber": [],
+        "rackNumber": "",
+        "lagar": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "rackSelfNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rackNumber": {
+          "type": "string"
+        },
+        "lagar": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "rackSelfNumber",
+        "rackNumber",
+        "lagar",
+        "organizer"
+      ]
+    },
+    "GetWHPlacesRequest": {
+      "title": "GetWHPlacesRequest",
+      "example": {
+        "search": "",
+        "filters": {
+          "lagar": [],
+          "city": []
+        },
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string"
+        },
+        "filters": {
+          "$ref": "#/definitions/Filters1"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "search",
+        "filters",
+        "organizer"
+      ]
+    },
+    "Filters1": {
+      "title": "Filters1",
+      "example": {
+        "lagar": [],
+        "city": []
+      },
+      "type": "object",
+      "properties": {
+        "lagar": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "city": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "lagar",
+        "city"
+      ]
+    },
+    "UpdateWHPlaceRequest": {
+      "title": "UpdateWHPlaceRequest",
+      "example": {
+        "id": "",
+        "city": "",
+        "rackSelfNumber": [],
+        "rackNumber": "",
+        "lagar": "",
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "rackSelfNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rackNumber": {
+          "type": "string"
+        },
+        "lagar": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "city",
+        "rackSelfNumber",
+        "rackNumber",
+        "lagar",
+        "organizer"
+      ]
+    },
+    "InsertTimeTrackingRequest": {
+      "title": "InsertTimeTrackingRequest",
+      "example": {
+        "user": "",
+        "date": "",
+        "timeEntries": [
+          {
+            "type": "",
+            "start": "",
+            "end": "",
+            "lat": "",
+            "long": ""
+          }
+        ],
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "timeEntries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TimeEntry"
+          }
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "user",
+        "date",
+        "timeEntries",
+        "organizer"
+      ]
+    },
+    "TimeEntry": {
+      "title": "TimeEntry",
+      "example": {
+        "type": "",
+        "start": "",
+        "end": "",
+        "lat": "",
+        "long": ""
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "string"
+        },
+        "long": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "start",
+        "end",
+        "lat",
+        "long"
+      ]
+    },
+    "UpdateTimeTrackingRequest": {
+      "title": "UpdateTimeTrackingRequest",
+      "example": {
+        "id": "",
+        "user": "",
+        "date": "",
+        "timeEntries": [
+          {
+            "type": "",
+            "start": "",
+            "end": ""
+          },
+          {
+            "type": "",
+            "start": "",
+            "end": ""
+          }
+        ],
+        "organizer": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "timeEntries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TimeEntry1"
+          }
+        },
+        "organizer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "user",
+        "date",
+        "timeEntries",
+        "organizer"
+      ]
+    },
+    "TimeEntry1": {
+      "title": "TimeEntry1",
+      "example": {
+        "type": "",
+        "start": "",
+        "end": ""
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "start",
+        "end"
+      ]
+    },
+    "CreateCityRequest": {
+      "title": "CreateCityRequest",
+      "example": {
+        "name": ""
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "GetCitiesRequest": {
+      "title": "GetCitiesRequest",
+      "example": {
+        "sortBy": "",
+        "order": "",
+        "search": "",
+        "page": 1,
+        "limit": 10
+      },
+      "type": "object",
+      "properties": {
+        "sortBy": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "sortBy",
+        "order",
+        "search",
+        "page",
+        "limit"
+      ]
+    },
+    "UpdateCityRequest": {
+      "title": "UpdateCityRequest",
+      "example": {
+        "id": "",
+        "name": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "UpdateLanguageRequest": {
+      "title": "UpdateLanguageRequest",
+      "example": {
+        "id": "",
+        "language": ""
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "language"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Menu"
+    },
+    {
+      "name": "User Type"
+    },
+    {
+      "name": "User"
+    },
+    {
+      "name": "Auth"
+    },
+    {
+      "name": "Package"
+    },
+    {
+      "name": "Organizer"
+    },
+    {
+      "name": "Designation"
+    },
+    {
+      "name": "Stamm User"
+    },
+    {
+      "name": "Stamm User Project"
+    },
+    {
+      "name": "Stamm User Document"
+    },
+    {
+      "name": "Lagar"
+    },
+    {
+      "name": "WH Place"
+    },
+    {
+      "name": "Time Tracking"
+    },
+    {
+      "name": "City"
+    },
+    {
+      "name": "Language"
+    }
+  ]
+}
